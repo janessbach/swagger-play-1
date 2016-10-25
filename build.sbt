@@ -4,7 +4,7 @@ version := "1.5.2-SNAPSHOT"
 checksums in update := Nil
 
 scalaVersion:= "2.11.6"
-crossScalaVersions := Seq("2.11.6", "2.11.7")
+crossScalaVersions := Seq("2.11.6", "2.11.7", "2.11.8")
 
 libraryDependencies ++= Seq(
   "org.slf4j"                      % "slf4j-api"                  % "1.7.16",
@@ -30,7 +30,6 @@ publishTo <<= version { (v: String) =>
 publishArtifact in Test := false
 publishMavenStyle := true
 pomIncludeRepository := { x => false }
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 organization := "io.swagger"
 pomExtra := {
   <url>http://swagger.io</url>
